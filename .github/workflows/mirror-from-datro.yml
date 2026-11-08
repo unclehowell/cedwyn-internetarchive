@@ -1,0 +1,37 @@
+name: mirror-from-datro
+# P-IA-CATCHUP-TOO-LARGE (problems run 26254bc3, 8 Nov 2026): datro@internetarchive stays the source of truth and the
+# writer (work/internetarchive/box/commit_box.py) is not retargeted. This job copies it into this repo INSIDE the runner
+# (no box disk, no API file limits): add/replace only, and the split-only files are never touched.
+# The site build does not read this repo until themes.json gains an internetarchive theme (a separate main PR; #517 merged 8 Nov 06:18Z).
+on:
+  schedule: [{cron: '40 7 * * *'}]   # daily, after the 06:30 London 5-day re-capture window
+  workflow_dispatch:
+permissions: {contents: write}
+concurrency: {group: mirror, cancel-in-progress: false}
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    env: {SRC_REPO: unclehowell/datro, SRC_BRANCH: internetarchive}
+    steps:
+      - uses: actions/checkout@v4
+        with: {ref: main, fetch-depth: 1}
+      - name: Copy datro@internetarchive (add/replace only)
+        run: |
+          git clone -q --depth 1 --single-branch --branch "$SRC_BRANCH" "https://github.com/$SRC_REPO.git" /tmp/src
+          SRC_SHA=$(git -C /tmp/src rev-parse HEAD)
+          rsync -a --exclude .git --exclude .github --exclude README.md --exclude APP-README.md --exclude SPLIT.json \
+                --exclude public/data/central.json --exclude tools/sync_central.py /tmp/src/ ./
+          python3 - "$SRC_SHA" <<'PY'
+          import json, sys, datetime
+          p = 'SPLIT.json'
+          try: d = json.load(open(p))
+          except Exception: d = {}
+          d['data_source'] = {'repo': 'unclehowell/datro', 'branch': 'internetarchive', 'sha': sys.argv[1],
+                              'copied_utc': datetime.datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ'), 'mode': 'add/replace'}
+          json.dump(d, open(p, 'w'), indent=1); open(p, 'a').write('\n')
+          PY
+          git add -A
+          if git diff --cached --quiet -- . ':!SPLIT.json'; then echo "no change since $SRC_SHA"; exit 0; fi
+          git -c user.name="cedwyn-mirror" -c user.email="actions@users.noreply.github.com" commit -q -m "Copy datro@internetarchive ${SRC_SHA:0:7} (add/replace; split-only files kept) — Sion's Tab agent"
+          git push origin HEAD:main
