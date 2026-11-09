@@ -10,7 +10,7 @@
   "status",
   "page"
  ],
- "synced_utc": "2026-11-09T02:00:32Z",
+ "synced_utc": "2026-11-09T13:25:15Z",
  "count": 80,
  "not_in_central": [
   "EV-0900",
@@ -764,7 +764,7 @@
    "title": "Conveyance and plan, BP Pension Trust to BP Properties (farmhouse and garden)",
    "date_display": "23 May 1975 (item 13 plan is described as dated 23 February 1975)",
    "date_sort": "1975",
-   "status": "NOT YET OBTAINED",
+   "status": "WITHDRAWN: duplicate of EV-0052",
    "page": "/research/missing-records/#mr-0041"
   },
   "MR-0068": {
