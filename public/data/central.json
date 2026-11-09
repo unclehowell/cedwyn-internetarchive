@@ -10,19 +10,9 @@
   "status",
   "page"
  ],
- "synced_utc": "2026-11-08T03:08:36Z",
- "count": 70,
+ "synced_utc": "2026-11-09T02:00:32Z",
+ "count": 80,
  "not_in_central": [
-  "EV-0234",
-  "EV-0274",
-  "EV-0339",
-  "EV-0600",
-  "EV-0601",
-  "EV-0602",
-  "EV-0603",
-  "EV-0604",
-  "EV-0605",
-  "EV-0606",
   "EV-0900",
   "MR-0118",
   "MR-0121",
@@ -236,6 +226,15 @@
    "date_sort": "1940-08",
    "status": "PENDING — catalogue verified, document not seen.",
    "page": "https://research.bucklerfamily.estate/evidence/ev-0233-dbdt129-3-wgr-thomas-llandough-farm-tenancy-1940/"
+  },
+  "EV-0234": {
+   "id": "EV-0234",
+   "kind": "evidence",
+   "title": "NOT OUR FARM: Thomas Williams of Ynysawdre Farm and the Ynysawdre Coal Co., agreement and umpire’s award, 1878",
+   "date_display": null,
+   "date_sort": "1878",
+   "status": "catalogued",
+   "page": null
   },
   "EV-0235": {
    "id": "EV-0235",
@@ -534,6 +533,15 @@
    "status": "SOURCE PENDING (snippet only)",
    "page": "https://research.bucklerfamily.estate/evidence/ev-0273-south-wales-echo-23-feb-1990-great-house-farm-homes-bid-village-green/"
   },
+  "EV-0274": {
+   "id": "EV-0274",
+   "kind": "evidence",
+   "title": "Probate calendar 1991: “BUCKLER, William Beverley … of Penarth … died 29 April 1990”, administration granted at Llandaff on 11 July 1991 (probable match for William “Billy” Buckler; identity not proven); no grant found for Mary (Nancy) Williams under “Buckler” in 1983–87",
+   "date_display": null,
+   "date_sort": "1991",
+   "status": "catalogued",
+   "page": null
+  },
   "EV-0275": {
    "id": "EV-0275",
    "kind": "evidence",
@@ -669,6 +677,15 @@
    "status": "HELD (copy)",
    "page": null
   },
+  "EV-0339": {
+   "id": "EV-0339",
+   "kind": "evidence",
+   "title": "Glamorgan Archives: South Wales Constabulary records, November–December 1988 — Great House Farm, Llandough (27 Sep 2026)",
+   "date_display": "2026-09-27 to 2026-10-22",
+   "date_sort": "2026-09-27",
+   "status": "partial",
+   "page": null
+  },
   "EV-0513": {
    "id": "EV-0513",
    "kind": "evidence",
@@ -677,6 +694,69 @@
    "date_sort": "2026-10-13",
    "status": "HELD (agenda read in full, 23 Oct 2026). Minutes of the 22 October 2026 meeting: not yet published at 09:45 BST on 23 October 2026.",
    "page": "https://research.bucklerfamily.estate/evidence/ev-0513-llandough-community-council-agenda-22-october-2026-item-10/"
+  },
+  "EV-0600": {
+   "id": "EV-0600",
+   "kind": "evidence",
+   "title": "WhatDoTheyKnow: Ministry of Justice, “BP vs Buckler 1987”",
+   "date_display": null,
+   "date_sort": "1987",
+   "status": "catalogued",
+   "page": null
+  },
+  "EV-0601": {
+   "id": "EV-0601",
+   "kind": "evidence",
+   "title": "WhatDoTheyKnow: Vale of Glamorgan Council, “2020 01590 HYB”",
+   "date_display": null,
+   "date_sort": "2020",
+   "status": "catalogued",
+   "page": null
+  },
+  "EV-0602": {
+   "id": "EV-0602",
+   "kind": "evidence",
+   "title": "WhatDoTheyKnow: The National Archives, “Great House Farm, Llandough, Cardiff (BP vs Buckler 1987)”",
+   "date_display": null,
+   "date_sort": "1987",
+   "status": "catalogued",
+   "page": null
+  },
+  "EV-0603": {
+   "id": "EV-0603",
+   "kind": "evidence",
+   "title": "WhatDoTheyKnow: Ministry of Defence, “1988 Dispossession of Great House Farm, Llandough from the Williams/ Buckler Family”",
+   "date_display": null,
+   "date_sort": "1988",
+   "status": "catalogued",
+   "page": null
+  },
+  "EV-0604": {
+   "id": "EV-0604",
+   "kind": "evidence",
+   "title": "WhatDoTheyKnow: National Police Chiefs’ Council, “BP vs Buckler 1987”",
+   "date_display": null,
+   "date_sort": "1987",
+   "status": "catalogued",
+   "page": null
+  },
+  "EV-0605": {
+   "id": "EV-0605",
+   "kind": "evidence",
+   "title": "WhatDoTheyKnow: HM Courts and Tribunals Service, “Freedom of Information Request – Administrative Records for BP Properties Ltd v Buckler (1974)”",
+   "date_display": null,
+   "date_sort": "1974",
+   "status": "catalogued",
+   "page": null
+  },
+  "EV-0606": {
+   "id": "EV-0606",
+   "kind": "evidence",
+   "title": "WhatDoTheyKnow: Llandough Community Council, “Meeting of 22 October 2026: remote-only arrangements, outstanding questions and the Great House Farm (Tŷ Mawr) records”",
+   "date_display": null,
+   "date_sort": "2026",
+   "status": "catalogued",
+   "page": null
   },
   "MR-0041": {
    "id": "MR-0041",
